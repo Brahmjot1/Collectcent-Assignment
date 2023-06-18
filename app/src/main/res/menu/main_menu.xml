@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/menu_wallet"
+            android:icon="@drawable/baseline_account_balance_wallet_24"
+            android:title="My Wallet"/>
+
+        <item android:id="@+id/menu_reward"
+            android:icon="@drawable/baseline_attach_money_24"
+            android:title="Daily Reward"/>
+
+        <item android:id="@+id/menu_refer"
+            android:icon="@drawable/baseline_money_24"
+            android:title="Refer and Earn"/>
+
+        <item android:id="@+id/menu_history"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Point History"/>
+
+        <item android:id="@+id/menu_policy"
+            android:icon="@drawable/baseline_policy_24"
+            android:title="Privacy Policy"/>
+
+        <item android:id="@+id/menu_TnC"
+            android:icon="@drawable/baseline_menu_24"
+            android:title="Terms and Conditions"/>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/menu_forgotPass"
+            android:icon="@drawable/baseline_password_24"
+            android:title="Forgot Password"/>
+    </group>
+</menu>
