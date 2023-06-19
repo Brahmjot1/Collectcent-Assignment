@@ -103,13 +103,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         slidemenulistarray=result1.getJSONArray("sideMenuList");
                         homeDataListarray=result1.getJSONArray("homeDataList");
 
-
                         getHomeSlider(homeSliderarray);
                         getHomeDataList(homeDataListarray);
                         setScreenValue(homeDataListarray);
-//                        JSONArray todayStoryArray=result1.getJSONArray("")
 
-//                        Constants.alertDialog(this, "User updated successfully");
                     }
                     else{
 
@@ -120,13 +117,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     e.printStackTrace();
                 }
             }
-
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
 
             }
         });
-
         recyclerView = findViewById(R.id.event_recycle);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(RecyclerView.HORIZONTAL);
@@ -135,7 +130,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         bannerAdapter = new BannerAdapter(getApplicationContext(), bannerArrayList);
         recyclerView.setAdapter(bannerAdapter);
     }
-
     private void setScreenValue(JSONArray homeDataListarray) {
         try {
             for (int j = 0; j < homeDataListarray.length(); j++) {
@@ -146,9 +140,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     continue;
                 }
                 else if(jb.get("type").equals("earnGrid")) {
-                    /*
-                    * Button grid me setkrdo
-                    * */
+
                     JSONArray jsonArray = jb.getJSONArray("data");
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jb2 = new JSONObject(jsonArray.get(i).toString());
@@ -186,7 +178,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 e.printStackTrace();
             }
     }
-
     private void getHomeSlider(JSONArray categoryList2) {
         try{
             for (int i = 0; i<categoryList2.length(); i++) {
@@ -232,8 +223,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             e.printStackTrace();
         }
     }
-
-    //Navigation
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
@@ -244,5 +233,4 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
 
     }
-    //Toolbar
 }
